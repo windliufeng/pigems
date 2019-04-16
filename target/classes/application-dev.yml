@@ -1,0 +1,10 @@
+server:
+  context-path: /springDev #Springboot默认没有项目名,配置项目名
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  mvc:    #配置视图解析
+    view:
+      prefix: /
+      suffix: .jsp

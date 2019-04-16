@@ -1,0 +1,15 @@
+server:
+  #context-path: /springbootProd
+  #Springboot默认没有项目名,配置项目名,因为配置文件拆分了,写在子配置中,看具体用哪一个
+  port: 9898
+spring:
+  profiles:
+    active: dev    #主配置选择要用哪个环境,dev和prod选择一个
+  datasource:   #配置数据库的连接参数
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cmfz
+    username: root
+    password: root
+mybatis:                #扫描mapper文件,起别名,扫描dao
+  mapper-locations: classpath:com/baizhi/liu/mapper/*Mapper.xml
+  type-aliases-package: com.baizhi.liu.entity #起别名
